@@ -3,15 +3,12 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
 const ResultScreen = ({ route }) => {
-  const { motion } = route.params;
+  const { activationCount } = route.params;
 
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Resultados dos Movimentos</Text>
-      <Text style={styles.motionText}>Último Movimento:</Text>
-      <Text style={styles.motionText}>Eixo X: {motion.x.toFixed(2)}</Text>
-      <Text style={styles.motionText}>Eixo Y: {motion.y.toFixed(2)}</Text>
-      <Text style={styles.motionText}>Eixo Z: {motion.z.toFixed(2)}</Text>
+      <Text style={styles.motionText}>O sabre foi ativado {activationCount} vezes!</Text>
     </View>
   );
 };
