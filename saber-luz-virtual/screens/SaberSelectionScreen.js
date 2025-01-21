@@ -7,19 +7,19 @@ const sabers = [
     {
       id: 1,
       name: 'Sabre Azul',
-      image: require('../assets/sabre.png'), // Imagem do sabre
+      image: require('../assets/lightsaber-blue.png'), // Imagem do sabre
       sound: require('../assets/saber.wav'), // Arquivo de som associado
     },
     {
       id: 2,
       name: 'Sabre Vermelho',
-      image: require('../assets/sabre.png'),
+      image: require('../assets/lightsaber-red.png'),
       sound: require('../assets/saber.wav'),
     },
     {
       id: 3,
       name: 'Sabre Verde',
-      image: require('../assets/sabre.png'),
+      image: require('../assets/lightsaber-green.png'),
       sound: require('../assets/saber.wav'),
     },
   ];

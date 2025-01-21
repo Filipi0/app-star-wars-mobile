@@ -49,7 +49,7 @@ const SaberScreen = ({ route, navigation }) => {
         setMotion(data);
 
         const intensity = Math.sqrt(data.x ** 2 + data.y ** 2 + data.z ** 2);
-        if (intensity > 2 && soundRef.current) {
+        if (intensity > 4 && soundRef.current) {
           await soundRef.current.replayAsync();
           setActivationCount((prev) => prev + 1);
         }
