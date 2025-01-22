@@ -11,7 +11,7 @@ const HomeScreen = ({ navigation }) => (
   <ImageBackground
     source={require("../assets/imagemFundo.png")}
     style={styles.background}
-    imageStyle={{ opacity: 0.5 }} // Define a opacidade da imagem de fundo
+    imageStyle={{ opacity: 1 }} // Define a opacidade da imagem de fundo
   >
     <View style={styles.container}>
       <Text style={styles.title}>Bem-vindo</Text>
