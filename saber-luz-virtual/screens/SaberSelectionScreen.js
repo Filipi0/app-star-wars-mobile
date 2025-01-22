@@ -1,29 +1,27 @@
 // screens/SaberSelectionScreen.js
-import { Sound } from 'expo-av/build/Audio';
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 
 const sabers = [
-    {
-      id: 1,
-      name: 'Sabre Azul',
-      image: require('../assets/lightsaber-blue.png'), // Imagem do sabre
-      sound: require('../assets/saber.wav'), // Arquivo de som associado
-    },
-    {
-      id: 2,
-      name: 'Sabre Vermelho',
-      image: require('../assets/lightsaber-red.png'),
-      sound: require('../assets/saber.wav'),
-    },
-    {
-      id: 3,
-      name: 'Sabre Verde',
-      image: require('../assets/lightsaber-green.png'),
-      sound: require('../assets/saber.wav'),
-    },
-  ];
-  
+  {
+    id: 1,
+    name: 'Sabre Azul',
+    image: require('../assets/lightsaber-blue.png'),
+    sound: require('../assets/saber.wav'),
+  },
+  {
+    id: 2,
+    name: 'Sabre Vermelho',
+    image: require('../assets/lightsaber-red.png'),
+    sound: require('../assets/saber.wav'),
+  },
+  {
+    id: 3,
+    name: 'Sabre Verde',
+    image: require('../assets/lightsaber-green.png'),
+    sound: require('../assets/saber.wav'),
+  },
+];
 
 const SaberSelectionScreen = ({ navigation }) => {
   const selectSaber = (saber) => {
@@ -55,29 +53,38 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#000',
+    padding: 20,
   },
   title: {
-    fontSize: 24,
+    fontSize: 28,
     fontWeight: 'bold',
     color: '#FFF',
-    marginBottom: 20,
+    textAlign: 'center',
+    marginBottom: 30,
   },
   saberList: {
     flexDirection: 'row',
     justifyContent: 'space-around',
     width: '100%',
+    flexWrap: 'wrap',
   },
   saberButton: {
     alignItems: 'center',
-    marginHorizontal: 10,
+    margin: 15,
+    padding: 10,
+    borderWidth: 2,
+    borderColor: '#FFF',
+    borderRadius: 10,
+    backgroundColor: 'rgba(255, 255, 255, 0.1)',
   },
   saberImage: {
-    width: 100,
-    height: 200,
+    width: 120,
+    height: 240,
     marginBottom: 10,
   },
   saberText: {
     fontSize: 18,
+    fontWeight: 'bold',
     color: '#FFF',
   },
 });
