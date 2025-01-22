@@ -9,7 +9,7 @@ import {
 
 const HomeScreen = ({ navigation }) => (
   <ImageBackground
-    source={require("../assets/imagemFundo.png")}
+    source={require("../assets/imagemFundo.jpg")}
     style={styles.background}
     imageStyle={{ opacity: 1 }} // Define a opacidade da imagem de fundo
   >
