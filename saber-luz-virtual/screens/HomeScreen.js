@@ -62,3 +62,4 @@ const styles = StyleSheet.create({
 });
 
 export default HomeScreen;
+//aparentemente deu errado pra filipi
