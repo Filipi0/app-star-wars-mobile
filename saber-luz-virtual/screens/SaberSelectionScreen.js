@@ -11,14 +11,14 @@ const sabers = [
   },
   {
     id: 2,
-    name: 'Sabre Vermelho',
-    image: require('../assets/lightsaber-red.png'),
+    name: 'Sabre Verde',
+    image: require('../assets/lightsaber-green.png'),
     sound: require('../assets/saber.wav'),
   },
   {
     id: 3,
-    name: 'Sabre Verde',
-    image: require('../assets/lightsaber-green.png'),
+    name: 'Sabre Vermelho',
+    image: require('../assets/lightsaber-red.png'),
     sound: require('../assets/saber.wav'),
   },
 ];
@@ -38,7 +38,7 @@ const SaberSelectionScreen = ({ navigation }) => {
             style={styles.saberButton}
             onPress={() => selectSaber(saber)}
           >
-            <Image source={saber.image} style={styles.saberImage} />
+            <Image source={saber.image} style={styles.saberImage} resizeMode="contain"/>
             <Text style={styles.saberText}>{saber.name}</Text>
           </TouchableOpacity>
         ))}
@@ -60,7 +60,8 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#FFF',
     textAlign: 'center',
-    marginBottom: 30,
+    marginTop: 30,
+    marginBottom: 10,
   },
   saberList: {
     flexDirection: 'row',
@@ -72,15 +73,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     margin: 15,
     padding: 10,
-    borderWidth: 2,
-    borderColor: '#FFF',
     borderRadius: 10,
-    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+    backgroundColor: 'rgba(255, 255, 255, 0.15)',
   },
   saberImage: {
     width: 120,
     height: 240,
-    marginBottom: 10,
   },
   saberText: {
     fontSize: 18,
