@@ -40,7 +40,10 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 32,
     fontWeight: "bold",
-    color: "rgba(255, 255, 255, 0.8)",
+    color: "rgba(255, 255, 255, 1)",
+    textShadowColor: '#000',
+    textShadowOffset: { width: 2, height: 2 },
+    textShadowRadius: 5,
     textAlign: "center",
     marginBottom: 10,
   },
@@ -49,7 +52,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#1E90FF",
     borderRadius: 10,
     marginTop: 50,
-    backgroundColor: "rgba(255, 0, 30, 0.8)",
+    backgroundColor: "rgba(122, 0, 0, 1)",
   },
   buttonText: {
     fontSize: 18,
