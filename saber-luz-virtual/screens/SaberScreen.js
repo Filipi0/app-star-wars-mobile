@@ -65,14 +65,16 @@ const SaberScreen = ({ route, navigation }) => {
 
   return (
     <View style={styles.container}>
-      <Image source={selectedSaber.image} style={styles.saberImage} />
+      <Image source={selectedSaber.image} style={styles.saberImage} resizeMode="contain"/>
       <Text style={styles.title}>{selectedSaber.name}</Text>
       <Text style={styles.subtitle}>Movimente o celular para ouvir o som!</Text>
-      <Text style={styles.motionText}>Eixo X: {x.toFixed(2)}</Text>
-      <Text style={styles.motionText}>Eixo Y: {y.toFixed(2)}</Text>
-      <Text style={styles.motionText}>Eixo Z: {z.toFixed(2)}</Text>
+      <View style={styles.motionContainer}>
+        <Text style={styles.motionText}>Eixo X: {x.toFixed(2)}</Text>
+        <Text style={styles.motionText}>Eixo Y: {y.toFixed(2)}</Text>
+        <Text style={styles.motionText}>Eixo Z: {z.toFixed(2)}</Text>
+      </View>
       <TouchableOpacity
-        style={[styles.button, { backgroundColor: isActive ? '#FF0000' : '#00FF00' }]}
+        style={[styles.button, { backgroundColor: isActive ? '#007A7A' : '#004040' }]}
         onPress={() => setIsActive(!isActive)}
       >
         <Text style={styles.buttonText}>{isActive ? 'Desativar Sabre' : 'Ativar Sabre'}</Text>
@@ -103,26 +105,38 @@ const styles = StyleSheet.create({
   subtitle: {
     fontSize: 18,
     color: '#BBB',
-    marginBottom: 10,
+    marginBottom: 8,
   },
+  motionContainer: {
+    flexDirection: 'row', 
+    justifyContent: 'space-between', 
+    alignItems: 'center', 
+    marginVertical: 6, 
+    width: '80%', 
+  },  
   motionText: {
     fontSize: 16,
     color: '#FFF',
     marginVertical: 5,
   },
   button: {
+    display: 'flex',
     padding: 15,
-    backgroundColor: '#1E90FF',
+    backgroundColor: '#7A0000',
     borderRadius: 10,
-    marginTop: 20,
+    marginTop: 15,
+    width: '80%',
+    justifyContent: 'center',
   },
   buttonText: {
     fontSize: 18,
     color: '#FFF',
+    textAlign: 'center',
+    fontWeight: 'bold',
   },
   saberImage: {
     width: 150,
-    height: 300,
+    height: 400,
     marginBottom: 20,
   },
 });
